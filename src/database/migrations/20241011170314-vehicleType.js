@@ -8,7 +8,7 @@ module.exports = {
     await queryInterface.createTable(
       'vehicle_type',
       {
-        vehicle_type_id: {
+        type_id: {
           type: DataTypes.UUID,
           primaryKey: true,
           defaultValue: DataTypes.UUIDV4,

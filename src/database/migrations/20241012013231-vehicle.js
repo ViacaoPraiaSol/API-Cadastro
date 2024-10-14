@@ -30,12 +30,12 @@ module.exports = {
           type: Sequelize.STRING,
           allowNull: false,
         },
-        vehicle_type_id_fk: {
+        type_id_fk: {
           type: DataTypes.UUID,
           allowNull:false,
           references: {
             model: 'vehicle_type',
-            key: 'vehicle_type_id'
+            key: 'type_id'
           },
           onUpdate: 'CASCADE',
           onDelete: 'CASCADE',
