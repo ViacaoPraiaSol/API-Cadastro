@@ -1,31 +1,41 @@
-
-
 services:
-  backend:
+  application:
     build: .
     ports: 
-      - 1254:1254
+      - 2020:2020
     environment:
       - DB_USER=postgres
       - DB_PASS=admin
       - DB_NAME=DB_SolturaManut
       - DB_HOST=db
       - JWT_SECRET=3271cn203nd83921ncd7sc7et2a
-    
     volumes:
       - .:/api-cadastro
-    
     container_name: cadastro_api
     restart: always
-    depends_on:
-      - db
+#    depends_on: 
+#      - db
+    networks:
+      - soltura_manut
 
-  db:
-    image: postgres
-    ports:
-      - 5432:5432
-    environment:
-      - POSTGRES_PASSWORD=admin
-      - POSTGRES_USER=postgres
-      
-    restart: always
+#  db:
+#    image: postgres
+#    ports:
+#      - 5432:5432
+#    environment:
+#      - POSTGRES_PASSWORD=admin
+#      - POSTGRES_USER=postgres
+#      - POSTGRES_DB=DB_SolturaManut
+#    volumes:
+#      - db_data:/var/lib/postgresql/data
+#    container_name: db
+#    restart: always
+#    networks:
+#      - soltura_manut
+
+#volumes:
+#  db_data:
+
+networks:
+  soltura_manut:
+  external: true
