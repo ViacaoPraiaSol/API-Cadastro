@@ -1,12 +1,14 @@
 import { DataTypes, Model } from 'sequelize';
-import db from '.'
+import db from '.';
 import sequelize from 'sequelize';
+import ClearanceLevel from './ClearanceLevel';
 
 class User extends Model {
   declare userId: string
   declare userName: string
   declare email: string
   declare password: string 
+  declare clearance: string
 }
 
 User.init({
@@ -28,6 +30,14 @@ User.init({
   password: {
     type: sequelize.STRING,
     allowNull: false,
+  },
+  clearance: {
+    type: DataTypes.UUID,
+    allowNull:false,
+    references: {
+      model: 'clearance_level',
+      key: 'level_id'
+    }
   }
 },
 {
@@ -35,6 +45,14 @@ User.init({
   tableName: 'user',
   timestamps: false,
   underscored: true,
+})
+
+User.belongsTo(ClearanceLevel, {
+  foreignKey: 'clearance'
+})
+
+ClearanceLevel.hasMany(User, {
+  foreignKey: 'clearance'
 })
 
 export default User;

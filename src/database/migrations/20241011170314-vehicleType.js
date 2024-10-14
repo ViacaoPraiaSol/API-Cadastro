@@ -24,10 +24,10 @@ module.exports = {
           type: Sequelize.STRING,
           allowNull: false,
         },
-        class: {
+        /*class: {
           type: Sequelize.STRING,
           allowNull: false,
-        }
+        }*/
       },
       {
         schema: 'registry'
@@ -36,6 +36,8 @@ module.exports = {
   },
 
   async down (queryInterface, Sequelize) {
-    await queryInterface.dropTable('vehicle_type')
+    await queryInterface.dropTable('vehicle_type', {
+      schema: 'registry'
+    })
   }
 };

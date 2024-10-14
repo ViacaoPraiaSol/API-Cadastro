@@ -27,6 +27,16 @@ module.exports = {
           type: Sequelize.STRING,
           allowNull: false,
         },
+        clearance: {
+          type: DataTypes.UUID,
+          allowNull:false,
+          references: {
+            model: 'clearance_level',
+            key: 'level_id'
+          },
+          onUpdate: 'CASCADE',
+          onDelete: 'CASCADE',
+        }
 
       },
       {
@@ -36,6 +46,8 @@ module.exports = {
   },
 
   async down (queryInterface, Sequelize) {
-    await queryInterface.dropTable('user')
+    await queryInterface.dropTable('user', {
+      schema: 'registry'
+    })
   }
 };

@@ -33,6 +33,8 @@ module.exports = {
   },
 
   async down (queryInterface, Sequelize) {
-    await queryInterface.dropTable('sector');     
+    await queryInterface.dropTable('sector', {
+      schema: 'registry'
+    });     
   }
 };

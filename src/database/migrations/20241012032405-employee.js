@@ -61,7 +61,9 @@ module.exports = {
   },
 
   async down (queryInterface, Sequelize) {
-    await queryInterface.dropTable('employee');
+    await queryInterface.dropTable('employee', {
+      schema: 'registry'
+    });
     
   }
 };
