@@ -1,0 +1,117 @@
+'use strict';
+
+/** @type {import('sequelize-cli').Migration} */
+module.exports = {
+  async up (queryInterface, Sequelize) {
+    await queryInterface.bulkInsert(
+      'clearance_level',
+      [
+        {
+          level_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
+          level_name: 'SUPERADMIN',
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          level_id: Sequelize.literal('uuid_generate_v4()'),
+          level_name: 'USER',
+          createdAt: new Date(),
+          updatedAt: new Date()
+        }
+    ], {
+      schema: 'registry'
+    }
+    )
+    /*await queryInterface.bulkInsert(
+      'user',
+      [{
+        user_name: 'TI-PraiaSol',
+        email: 'suporte.ti@viacaopraiasol.com.br',
+        password: '1254',
+        clearance: 'SUPERADMIN'
+      }]
+    );*/
+
+    await queryInterface.bulkInsert(
+      'sector', 
+      [{
+        sector_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
+        sector_name: 'ADMINISTRATIVO',
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },{
+        sector_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
+        sector_name: 'MANUTENÇÃO',
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },{
+        sector_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
+        sector_name: 'OPERACIONAL',
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      }
+      ], {
+        schema: 'registry'
+      }
+    );
+
+    await queryInterface.bulkInsert(
+      'vehicle_type',
+      [{
+        type_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
+        type_name: 'AR CONDICIONADO ARTICULADO',
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },{
+        type_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
+        type_name: 'AR CONDICIONADO CONVENCIONAL',
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },{
+        type_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
+        type_name: 'ARTICULADO',
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },{
+        type_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
+        type_name: 'CONVENCIONAL',
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },{
+        type_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
+        type_name: 'GV BIKE',
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },{
+        type_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
+        type_name: 'MICRO-ÔNIBUS',
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      }
+      ], {
+        schema: 'registry'
+      }
+    );
+    
+    /*await queryInterface.bulkInsert(
+      'vehicle'
+    );
+
+    await queryInterface.bulkInsert(
+      ''
+    );*/
+
+  },
+
+  async down (queryInterface, Sequelize) {
+    await queryInterface.bulkDelete('clearance_level', null, {
+      schema: 'registry'
+    });
+    await queryInterface.bulkDelete('sector', null, {
+      schema: 'registry'
+    });
+    await queryInterface.bulkDelete('vehicle_type', null, {
+      schema: 'registry'
+    });
+  }
+};

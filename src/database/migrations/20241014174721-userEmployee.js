@@ -37,7 +37,9 @@ module.exports = {
   },
 
   async down (queryInterface, Sequelize) {
-    await queryInterface.dropTable('user_employee');
+    await queryInterface.dropTable('user_employee', {
+      schema: 'registry'
+    });
     
   }
 };

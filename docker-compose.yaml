@@ -38,4 +38,4 @@ services:
 
 networks:
   soltura_manut:
-  external: true
+    external: true
