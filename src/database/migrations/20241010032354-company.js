@@ -23,8 +23,8 @@ module.exports = {
           allowNull: false,
         },
         company_index: {
-          type: Sequelize.INTEGER,
-          unique: true,
+          type: Sequelize.STRING,
+          //unique: true,
           //autoIncrement: true,
           allowNull: false,
         },

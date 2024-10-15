@@ -31,6 +31,26 @@ module.exports = {
           type: Sequelize.STRING,
           allowNull: false,
         },
+        company_id_fk: {
+          type: DataTypes.UUID,
+          allowNull:false,
+          references: {
+            model: 'company',
+            key: 'company_id'
+          },
+          onUpdate: 'CASCADE',
+          onDelete: 'CASCADE',
+        },
+        department_id_fk: {
+          type: DataTypes.UUID,
+          allowNull:false,
+          references: {
+            model: 'department',
+            key: 'department_id'
+          },
+          onUpdate: 'CASCADE',
+          onDelete: 'CASCADE',
+        },
         position_id_fk: {
           type: DataTypes.UUID,
           allowNull:false,
@@ -41,16 +61,6 @@ module.exports = {
           onUpdate: 'CASCADE',
           onDelete: 'CASCADE',
         },
-        company_id_fk: {
-          type: DataTypes.UUID,
-          allowNull:false,
-          references: {
-            model: 'company',
-            key: 'company_id'
-          },
-          onUpdate: 'CASCADE',
-          onDelete: 'CASCADE',
-        }
 
       },
       {
