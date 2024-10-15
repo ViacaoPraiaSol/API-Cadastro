@@ -30,6 +30,20 @@ module.exports = {
           type: Sequelize.STRING,
           allowNull: false,
         },
+        internal_number: {
+          type: Sequelize.STRING,
+          allowNull: false,
+        },
+        company_id_fk: {
+          type: DataTypes.UUID,
+          allowNull:false,
+          references: {
+            model: 'company',
+            key: 'company_id'
+          },
+          onUpdate: 'CASCADE',
+          onDelete: 'CASCADE',
+        },
         type_id_fk: {
           type: DataTypes.UUID,
           allowNull:false,
