@@ -18,10 +18,10 @@ module.exports = {
           type: Sequelize.STRING,
           allowNull: false,
         },
-        alias: {
+        /*alias: {
           type: Sequelize.STRING,
           allowNull: true,
-        },
+        },*/
         department_index: {
           type: Sequelize.INTEGER,
           unique: true,

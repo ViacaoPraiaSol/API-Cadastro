@@ -71,58 +71,72 @@ module.exports = {
           {
             department_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
             department_name: 'ALMOXARIFADO',
+            //alias: '',
             sector_id_fk: SectorIdAdm
           },{
             department_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
             department_name: 'ARRECADAÇÃO',
+            //alias: '',
             sector_id_fk: SectorIdAdm
           },{
             department_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
             department_name: 'BILHETAGEM',
+            //alias: '',
             sector_id_fk: SectorIdAdm
           },{
             department_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
             department_name: 'CÂMARA DE COMPENSAÇÃO DE TARIFA',
+            //alias: '',
             sector_id_fk: SectorIdAdm
           },{
             department_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
             department_name: 'CONTABILIDADE',
+            //alias: '',
             sector_id_fk: SectorIdAdm
           },{
             department_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
             department_name: 'DEPARTAMENTO DE PESSOAL',
+            //alias: '',
             sector_id_fk: SectorIdAdm
           },{
             department_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
-            department_name: 'DEPARTAMENTO DE RH',
+            department_name: 'DEPARTAMENTO DE RECURSOS HUMANOS',
+            //alias: '',
             sector_id_fk: SectorIdAdm
           },{
             department_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
             department_name: 'DIRETORIA',
+            //alias: '',
             sector_id_fk: SectorIdAdm
           },{
             department_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
             department_name: 'JURÍDICO',
+            //alias: '',
             sector_id_fk: SectorIdAdm
           },{
             department_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
             department_name: 'MEDICINA DO TRABALHO',
+            //alias: '',
             sector_id_fk: SectorIdAdm
           },{
             department_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
             department_name: 'MONITORAMENTO',
+            //alias: '',
             sector_id_fk: SectorIdAdm
           },{
             department_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
             department_name: 'SEGURANÇA DO TRABALHO',
+            //alias: '',
             sector_id_fk: SectorIdAdm
           },{
             department_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
             department_name: 'TRÁFEGO',
+            //alias: '',
             sector_id_fk: SectorIdAdm
           },{
             department_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
-            department_name: 'TI',
+            department_name: 'TECNOLOGIA DA INFORMAÇÃO',
+            //alias: '',
             sector_id_fk: SectorIdAdm
           },
           
@@ -131,18 +145,22 @@ module.exports = {
           {
             department_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
             department_name: 'ELÉTRICA',
+            //alias: '',
             sector_id_fk: SectorIdManut
           },{
             department_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
             department_name: 'MECÂNICA',
+            //alias: '',
             sector_id_fk: SectorIdManut
           },{
             department_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
             department_name: 'PROGRAMAÇÃO',
+            //alias: '',
             sector_id_fk: SectorIdManut
           },{
             department_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
             department_name: 'REFROMADORA',
+            //alias: '',
             sector_id_fk: SectorIdManut
           },
         ],
@@ -207,7 +225,7 @@ module.exports = {
             company_id_fk: IdVereda,
             type_id_fk: TypeArConvencional,
           },
-        ]
+        ], {transaction}
       )
 
 

@@ -43,6 +43,7 @@ User.init({
 {
   sequelize: db,
   tableName: 'user',
+  schema: 'registry',
   timestamps: false,
   underscored: true,
 })
