@@ -1,6 +1,6 @@
-import { DataTypes, Model } from "sequelize";
+import { DataTypes, Model } from 'sequelize'
 import db from '.'
-import sequelize from 'sequelize';
+import sequelize from 'sequelize'
 
 class ClearanceLevel extends Model {
 		declare levelId: string
@@ -22,6 +22,7 @@ ClearanceLevel.init({
 }, {
 	sequelize: db,
 	tableName: 'clearance_level',
+	schema: 'registry',
 	timestamps: false,
   underscored: true,
 }
