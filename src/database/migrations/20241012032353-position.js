@@ -24,7 +24,7 @@ module.exports = {
           autoIncrement: true,
           allowNull: false,
         },*/
-        department_id_fk: {
+        /*department_id: {
           type: DataTypes.UUID,
           allowNull:false,
           references: {
@@ -33,7 +33,7 @@ module.exports = {
           },
           onUpdate: 'CASCADE',
           onDelete: 'CASCADE',
-        }
+        }*/
       },
       {
         schema: 'registry'

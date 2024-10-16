@@ -28,7 +28,7 @@ module.exports = {
           autoIncrement: true,
           allowNull: false,
         },
-        sector_id_fk: {
+        sector_id: {
           type: DataTypes.UUID,
           allowNull:false,
           references: {
