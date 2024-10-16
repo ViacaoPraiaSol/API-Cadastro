@@ -2,41 +2,37 @@ import { DataTypes, Model } from 'sequelize';
 import db from '.';
 import sequelize from 'sequelize';
 
-class VehicleType extends Model {
-  declare typeId: string
-  declare typeIndex: number
-  declare typeName: string
+class Sector extends Model {
+  declare sectorId: string
+  declare sectorName: string
+  declare sectorIndex: number
 }
 
-VehicleType.init({
-  type_id: {
+Sector.init({
+  sector_id: {
     type: DataTypes.UUID,
     primaryKey: true,
     defaultValue: DataTypes.UUIDV4,
     allowNull: false,
   },
-  type_index: {
+  sector_name: {
+    type: sequelize.STRING,
+    allowNull: false,
+  },
+  sector_index: {
     type: sequelize.INTEGER,
     unique: true,
     autoIncrement: true,
     allowNull: false,
-  },
-  type_name: {
-    type: sequelize.STRING,
-    allowNull: false,
-  },
-  /*class: {
-    type: Sequelize.STRING,
-    allowNull: false,
-  }*/
+  }
 },
 {
   sequelize: db,
-  tableName: 'vehicle_type',
+  tableName: 'sector',
   schema: 'registry',
   timestamps: false,
   underscored: true
 }
 )
 
-export default VehicleType;
+export default Sector;

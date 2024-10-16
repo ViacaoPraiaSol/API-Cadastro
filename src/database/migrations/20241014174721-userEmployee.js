@@ -8,7 +8,7 @@ module.exports = {
     await queryInterface.createTable(
       'user_employee', 
       {
-        user_id_fk: {
+        user_id: {
           type: DataTypes.UUID,
           allowNull:false,
           references: {
@@ -18,7 +18,7 @@ module.exports = {
           onUpdate: 'CASCADE',
           onDelete: 'CASCADE',
         },
-        employee_id_fk: {
+        employee_id: {
           type: DataTypes.UUID,
           allowNull:false,
           references: {

@@ -72,72 +72,72 @@ module.exports = {
             department_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
             department_name: 'ALMOXARIFADO',
             //alias: '',
-            sector_id_fk: SectorIdAdm
+            sector_id: SectorIdAdm
           },{
             department_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
             department_name: 'ARRECADAÇÃO',
             //alias: '',
-            sector_id_fk: SectorIdAdm
+            sector_id: SectorIdAdm
           },{
             department_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
             department_name: 'BILHETAGEM',
             //alias: '',
-            sector_id_fk: SectorIdAdm
+            sector_id: SectorIdAdm
           },{
             department_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
             department_name: 'CÂMARA DE COMPENSAÇÃO DE TARIFA',
             //alias: '',
-            sector_id_fk: SectorIdAdm
+            sector_id: SectorIdAdm
           },{
             department_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
             department_name: 'CONTABILIDADE',
             //alias: '',
-            sector_id_fk: SectorIdAdm
+            sector_id: SectorIdAdm
           },{
             department_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
             department_name: 'DEPARTAMENTO DE PESSOAL',
             //alias: '',
-            sector_id_fk: SectorIdAdm
+            sector_id: SectorIdAdm
           },{
             department_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
             department_name: 'DEPARTAMENTO DE RECURSOS HUMANOS',
             //alias: '',
-            sector_id_fk: SectorIdAdm
+            sector_id: SectorIdAdm
           },{
             department_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
             department_name: 'DIRETORIA',
             //alias: '',
-            sector_id_fk: SectorIdAdm
+            sector_id: SectorIdAdm
           },{
             department_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
             department_name: 'JURÍDICO',
             //alias: '',
-            sector_id_fk: SectorIdAdm
+            sector_id: SectorIdAdm
           },{
             department_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
             department_name: 'MEDICINA DO TRABALHO',
             //alias: '',
-            sector_id_fk: SectorIdAdm
+            sector_id: SectorIdAdm
           },{
             department_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
             department_name: 'MONITORAMENTO',
             //alias: '',
-            sector_id_fk: SectorIdAdm
+            sector_id: SectorIdAdm
           },{
             department_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
             department_name: 'SEGURANÇA DO TRABALHO',
             //alias: '',
-            sector_id_fk: SectorIdAdm
+            sector_id: SectorIdAdm
           },{
             department_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
             department_name: 'TRÁFEGO',
             //alias: '',
-            sector_id_fk: SectorIdAdm
+            sector_id: SectorIdAdm
           },{
             department_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
             department_name: 'TECNOLOGIA DA INFORMAÇÃO',
             //alias: '',
-            sector_id_fk: SectorIdAdm
+            sector_id: SectorIdAdm
           },
           
 
@@ -146,22 +146,22 @@ module.exports = {
             department_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
             department_name: 'ELÉTRICA',
             //alias: '',
-            sector_id_fk: SectorIdManut
+            sector_id: SectorIdManut
           },{
             department_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
             department_name: 'MECÂNICA',
             //alias: '',
-            sector_id_fk: SectorIdManut
+            sector_id: SectorIdManut
           },{
             department_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
             department_name: 'PROGRAMAÇÃO',
             //alias: '',
-            sector_id_fk: SectorIdManut
+            sector_id: SectorIdManut
           },{
             department_id: Sequelize.literal('uuid_generate_v4()'), // Gera um UUID
             department_name: 'REFROMADORA',
             //alias: '',
-            sector_id_fk: SectorIdManut
+            sector_id: SectorIdManut
           },
         ],
         { transaction }
@@ -212,8 +212,8 @@ module.exports = {
             year: '2020',
             license_plate: 'AE3R-219',
             internal_number: '12279',
-            company_id_fk: IdPraiaSol,
-            type_id_fk: TypeArArticulado,
+            company_id: IdPraiaSol,
+            type_id: TypeArArticulado,
           },
           {
             vehicle_id: Sequelize.literal('uuid_generate_v4()'),
@@ -222,8 +222,8 @@ module.exports = {
             year: '2017',
             license_plate: 'FC7E-982',
             internal_number: '13253',
-            company_id_fk: IdVereda,
-            type_id_fk: TypeArConvencional,
+            company_id: IdVereda,
+            type_id: TypeArConvencional,
           },
         ], {transaction}
       )
