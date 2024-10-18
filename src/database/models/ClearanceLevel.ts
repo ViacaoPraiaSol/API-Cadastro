@@ -1,6 +1,6 @@
-import { DataTypes, Model } from 'sequelize'
-import db from '.'
-import sequelize from 'sequelize'
+import { DataTypes, Model } from 'sequelize';
+import db from '.';
+import sequelize from 'sequelize';
 
 class ClearanceLevel extends Model {
 		declare levelId: string
