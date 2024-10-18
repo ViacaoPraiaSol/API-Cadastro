@@ -2,7 +2,7 @@
   "name": "cadasrto-geral-api",
   "version": "0.0.0",
   "description": "API para cadastros em geral",
-  "main": "src/server.ts",
+  "main": "src/Server.ts",
   "repository": "https://github.com/ViacaoPraiaSol/API-Cadastro.git",
   "author": "TI-PraiaSol <suporte.ti@viacaopraiasol.com.br>",
   "license": "MIT",
