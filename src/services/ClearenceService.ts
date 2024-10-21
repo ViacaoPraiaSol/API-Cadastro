@@ -1,7 +1,7 @@
 import { ModelStatic } from "sequelize";
 import ClearanceLevel from "../database/models/ClearanceLevel";
-import RESPONSE from "../utils/Response";
-import ClearanceInterface from "../database/interfaces/ClearanceInterface";
+import Response from "../utils/Response";
+import ClearanceInterface from "../database/interfaces/IClearanceLevel";
 import Validation from "./validations/ValidationSchema";
 
 
@@ -12,11 +12,11 @@ class ClearanceService {
     if(levelId) {
       const level = await this.model.findByPk(levelId);
       if (!level) {
-        return RESPONSE(404, { error: 'Nível de Acesso não encontrado!' });
+        return Response(404, { error: 'Nível de Acesso não encontrado!' });
       }
-      return RESPONSE(200, level);
+      return Response(200, level);
     }
-    return RESPONSE(202, await this.model.findAll());
+    return Response(202, await this.model.findAll());
   }
 
   async create(clearanceLevel: ClearanceInterface){
@@ -24,17 +24,17 @@ class ClearanceService {
 
     const createClearance = await this.model.create({ ...clearanceLevel});
 
-    return RESPONSE(201, createClearance);
+    return Response(201, createClearance);
   }
 
   async delete(levelId: string) {
     const level = await this.model.findByPk(levelId);
 
     if (!level) {
-      return RESPONSE (404, { error: 'Nível de Acesso não encontrado!' });
+      return Response (404, { error: 'Nível de Acesso não encontrado!' });
     }
     await level.destroy();
-    return RESPONSE(202, { message: 'Nível de Acesso excluido com sucesso!' });
+    return Response(202, { message: 'Nível de Acesso excluido com sucesso!' });
   }
 }
 

@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tsnd ."
+    "dev": "nodemon --watch src --exec ts-node src/Server.ts"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -30,6 +30,7 @@
     "@types/md5": "^2.3.5",
     "@types/sequelize": "^4.28.20",
     "@types/uuid": "^9.0.8",
+    "nodemon": "^3.1.7",
     "sequelize-cli": "^6.6.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.4.5"
