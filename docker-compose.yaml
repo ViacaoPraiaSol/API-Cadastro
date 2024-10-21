@@ -11,10 +11,17 @@ services:
       - JWT_SECRET=3271cn203nd83921ncd7sc7et2a
     volumes:
       - .:/api-cadastro
+
+      # Montagem do node_modules no contêiner
+      #- modules_data:/api-cadastro/node_modules  
+
     container_name: cadastro_api
     restart: always
+    #command: yarn dev
+
 #    depends_on: 
 #      - db
+
     networks:
       - soltura_manut
 
@@ -34,6 +41,7 @@ services:
 #      - soltura_manut
 
 #volumes:
+#  modules_data:
 #  db_data:
 
 networks:
